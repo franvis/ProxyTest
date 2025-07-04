@@ -1,0 +1,1 @@
+-keep class * implements com.example.result_api.PluginApi
