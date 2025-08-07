@@ -14,7 +14,7 @@ There are 4 testing scenarios that are mixing 2 things:
 3. Click on both buttons. Wait a couple of seconds. Filter logs with the `ResultApi` tag.
    a. For the "Click here for a Result log" button you will get for every suspending call a proper Result object: `Success(https://picsum.photos/id/1/200/300)`  
    b. For the "Click here for a Result log using yield on the proxy" button you will get a ClassCastException crash.
-4. Run `make installReleaseWithProguardRule` to install and launch the MainActivity for the variant that **obfuscates** the Result type (Check [proguard-rules.pro](app/proguard-rules.pro))
+4. Run `make installReleaseWithProguardRule` to install and launch the MainActivity for the variant that **obfuscates** the Result type (Check [proguard-rules-with-Result.pro](app/proguard-rules-with-Result.pro))
 5. Click on both buttons. Wait a couple of seconds. Filter logs with the `ResultApi` tag.
    a. For the "Click here for a Result log" button you will get a double wrapped result object: `Success(Success(https://picsum.photos/id/1/200/300))`  
    b. For the "Click here for a Result log using yield on the proxy" button you will get a proper Result object: `Success(https://picsum.photos/id/1/200/300)`
